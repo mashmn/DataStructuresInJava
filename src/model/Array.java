@@ -16,21 +16,24 @@ public class Array {
 			else {
 				System.out.println("This is the length: " + length);
 			}
-			int numArray[]=new int[length];
 			
+			int numArray[]=new int[length];			
 			System.out.println("Insert the elements next.\n");
-			for (int i = 0; i < length; i++) {
-				System.out.println("Enter element: ");
-				
-				String temp = elementscan.next();
-				
+			System.out.println("Enter element: ");
+			
+			for (int i = 0; i < length; i++) {				
+				String temp = elementscan.next();				
 				int tempparse = Integer.parseInt(temp);
-				System.out.println("The e" + tempparse);
+				if (i < (length-1)) {
+					System.out.println("Next one: ");
+				}
 				numArray[i] = tempparse;
 			}
 			
+			System.out.print("The elements: ");
+			
 			for (int i = 0; i < length; i++) {
-				System.out.println("The elements: " + numArray[i]);
+				System.out.print(numArray[i] + " ");
 			}
 			
 		}
