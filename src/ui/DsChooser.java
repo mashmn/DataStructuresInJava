@@ -1,7 +1,5 @@
 package ui;
 
-import model.*;
-
 public class DsChooser {
 	
 	String StringOfChoice;
@@ -9,8 +7,6 @@ public class DsChooser {
 	public String dsSwitcher(int firstChoice) {
 		switch (firstChoice) {
 			case 1:  StringOfChoice = "Arrays";
-				Array array = new Array();
-				array.welcomeMsg();
 				break;
 			case 2: StringOfChoice = "Linked List";
 				break;

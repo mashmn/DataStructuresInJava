@@ -1,27 +1,49 @@
 package model;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class Array {
-	
+public class Array {	
+	Scanner elementscan = new Scanner(System.in);
 	public void welcomeMsg() {		
 		
 		try {
+			
 			int length=lengthScanner();
-			System.out.println("This is the length: " + length);
+			
+			if (length <= 2) {
+				System.out.println("Sigh!!! Really! This is the length: " + length + "! -__-");
+			}
+			else {
+				System.out.println("This is the length: " + length);
+			}
+			int numArray[]=new int[length];
+			
+			System.out.println("Insert the elements next.\n");
+			for (int i = 0; i < length; i++) {
+				System.out.println("Enter element: ");
+				
+				String temp = elementscan.next();
+				
+				int tempparse = Integer.parseInt(temp);
+				System.out.println("The e" + tempparse);
+				numArray[i] = tempparse;
+			}
+			
+			for (int i = 0; i < length; i++) {
+				System.out.println("The elements: " + numArray[i]);
+			}
+			
 		}
 		catch (NumberFormatException e) {
 			System.out.println("Type length in numbers");
 		}
-		
-		
 	}
 	
 	public int lengthScanner() {
 		System.out.println("What is the length of the Array you need?");
-		Scanner array_length = new Scanner(System.in);			
-		int length = array_length.nextInt();
-		array_length.close();
+		System.out.println("Please try to type more than 2 elements! No one likes an oversmart fella!");
+					
+		int length = elementscan.nextInt();
 		return length;
 	}
 	
