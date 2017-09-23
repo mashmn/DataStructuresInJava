@@ -2,10 +2,9 @@ package ui;
 
 import java.util.Scanner;
 
+import model.array.*;
 import ui.DsChooser;
 import ui.UiChoiceText;
-
-import model.*;
 
 public class Ui {
 	

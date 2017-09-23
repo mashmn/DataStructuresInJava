@@ -1,6 +1,8 @@
-package model;
+package model.array;
 
 import java.util.*;
+
+import model.array.ArrayOps;
 
 public class Array {	
 	Scanner elementscan = new Scanner(System.in);
@@ -36,6 +38,9 @@ public class Array {
 				System.out.print(numArray[i] + " ");
 			}
 			
+			int AddDelUpdChoice = AddDelUpd();
+			ArrayOps arrayOps = new ArrayOps();
+			arrayOps.OperatorChoice(AddDelUpdChoice, numArray);
 		}
 		catch (NumberFormatException e) {
 			System.out.println("Type length in numbers");
@@ -48,6 +53,16 @@ public class Array {
 					
 		int length = elementscan.nextInt();
 		return length;
+	}
+	
+	public int AddDelUpd() {
+		System.out.println("What would you like to do next with this Array you created?");
+		System.out.println("1. Add an element to this Array");
+		System.out.println("2. Delete an element to this Array");
+		System.out.println("3. Update an element to this Array");
+					
+		int addDelUpdChoice = elementscan.nextInt();
+		return addDelUpdChoice;
 	}
 	
 }
